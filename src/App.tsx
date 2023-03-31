@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useRoutes} from 'react-router-dom';
+// import About from './RoutesArray/About'
+// import Contact from "./RoutesArray/Contact";
+// import ContactForm from "./RoutesArray/ContactForm";
+// import Details from "./RoutesArray/Details";
+import Routs from './RoutesArray/Routs';
 
-function App() {
+
+const App = () => {
+  const routing = useRoutes(Routs);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My App</h1>
+      {routing}
+
     </div>
   );
-}
+};
 
 export default App;
